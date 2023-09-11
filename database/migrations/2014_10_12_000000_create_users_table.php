@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->foreignId('prefecture_id')->constrained()->onUpdate('cascade');
         });
     }
 
